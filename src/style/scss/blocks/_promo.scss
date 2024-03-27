@@ -1,0 +1,94 @@
+.promo {
+   border-bottom: 1px solid var(--blue-500);
+   background-image: url(./../images/promo/promo.png);
+   background-repeat: no-repeat;
+   background-size: clamp(165px, 49.9%, 718px) 100%;
+   background-position: left 10px;
+   margin-block-start: 100px;
+   padding-block-start: 8.1%;
+
+		&__text-group {
+      width: clamp(243px, 49.5%, 50%);
+      margin: 0 clamp(1px, 7.85vw, 7.8%) 0 auto;
+		}
+
+		&__title {
+      font-family: var(--title-font);
+      text-transform: uppercase;
+      @include font (700, clamp(28px, 4.44vw, 64px), 1.2em);
+      letter-spacing: -0.03em;
+
+      &_blue {
+         background: var(--gradient-blue);
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         letter-spacing: -0.05em;
+      }
+		}
+
+		&__description {
+         @include font (400, clamp(12px, 1.6vw, 24px), 1.3em);
+         letter-spacing: 0.02em;
+         width: clamp(228px, 88.6%, 632px);
+         margin-block: clamp(8px, 1.1vw, 16px) 30px;
+		}
+
+		&__button {
+         margin-block-end: clamp(31px, 5.6vw, 81px);
+         @include button (clamp(170px, 35.3%, 252px), clamp(11px, 1vw, 14px) clamp(16.5px, 2.9vw, 42px), clamp(14px, 1.25vw, 18px));
+         img {
+            width: 22px;
+            align-self: flex-end;
+         }
+		}
+}
+
+@media screen and (min-width: 1600px) {
+   .promo{
+      background-size: 45%;
+   }
+}
+
+@media screen and (max-width: 1293px) {
+   .promo {
+      margin-block-start: 80px;
+      padding-block-start: 5%;
+
+      &__button {
+         width: 50%;
+      }
+   }
+}
+
+@media screen and (max-width: 730px) {
+   .promo {
+      margin-block-start: 63px;
+      padding-block-start: 12px;
+
+      @media screen and (max-width: 500px) {
+         background-image: url(./../images/promo/promo-mob.png);
+      background-size: 44% 100%;
+      }
+
+      &__text-group {
+      width: 62%;
+      margin: 0 0 0 auto;
+		}
+
+      &__button {
+         width: 73%;
+         padding: 8px 0 7px;
+      }
+      
+      &__title {
+         width: 79%;
+         line-height: 36px;
+		}
+
+		&__description {
+         margin-block-end: 8px;
+		}
+   }
+}
+

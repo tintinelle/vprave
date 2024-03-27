@@ -1,0 +1,141 @@
+.form-section {
+   position: relative;
+   display: flex;
+   gap: 29px;
+   border-bottom: 1px solid var(--blue-400);
+
+   &__gradient {
+      position: absolute;
+      top: -30%;
+      right: 0;
+   }
+   &__number {
+      @include number-block();
+      border-left: 1px solid var(--blue-400);
+      border-bottom: 1px solid var(--blue-400);
+      
+      img:first-of-type {
+         width: clamp(45px, 34%, 111px);
+         margin-inline: clamp(26px, 15%, 49px) auto;   
+      }
+	}
+
+		&__content-wrapper {
+         width: 75.4%;
+         border-right: 1px solid var(--blue-400);
+         border-bottom: 1px solid var(--blue-400);
+         padding-block-end: 76px;
+         display: flex;
+         flex-wrap: wrap;
+		}
+
+		&__title {
+      @include title-font();
+      margin-block: clamp(104px, 7.8vw, 113px) 49px;
+      margin-inline-start: clamp(15px, 11.2vw, 162px);
+		}
+
+		&__description {
+      @include font (400, clamp(16px, 1.25em, 18px), 1.5em);
+      margin-inline-start: clamp(15px, 11.2vw, 162px);
+      margin-block-end: 34px;
+		}
+
+		&__image {
+      width: 48%;
+      margin-inline-end: 28px;
+		}
+}
+.form {
+   width: 46%;
+		&__input-wrapper {
+      width: 100%;
+		}
+
+		&__label {
+      width: 100%;
+      margin-inline-start: 12px;
+      @include font (400, 16px, 20px);
+		}
+
+		&__input {
+      width: 100%;
+      margin-block: 8px 24px;
+      padding: 4px 12px;
+      border-radius: 2px;
+      border: 1px solid #747070;
+      color: var(--general-black);
+
+      &::placeholder {
+         color: var(--gray);
+         @include font (400, 14px, 24px);
+      }
+		}
+
+		&__error {
+		}
+
+		&__additional-info {
+      color: var(--gray);
+      float: right;
+		}
+
+		&__button {
+      @include button (100%, auto, 18px);
+      align-items: center;
+      height: 56px;
+      cursor: pointer;
+
+         img {
+            width: 22px;
+            margin-block-start: 5px;
+            margin-inline-start: 8px;
+         }
+		}
+}
+
+@media screen and (max-width: 635px) {
+   .form-section {
+      &__number {
+         img:first-of-type {
+            margin: 33px auto 0;   
+         }
+      }
+
+      &__content-wrapper {
+         padding-block-end: 0;
+      }
+
+      &__image {
+         width: 95%;
+         order: 4;
+         margin-block-start: 19px;
+		}
+
+      &__title {
+         margin-block: 104px 32px;
+         margin-inline-start: 14px;
+		}
+
+		&__description {
+         width: 95%;
+         margin-inline-start: 14px;
+         margin-block-end: 27px;
+         font-size: 16px;
+         line-height: 24px;
+		}
+   }
+
+   .form {
+      width: 90%;
+      margin: 0 auto;
+
+      textarea:last-of-type {
+         margin-block-end: 9px;
+      }
+   }
+
+   textarea {
+      height: 74px;
+   }
+}

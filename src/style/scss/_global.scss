@@ -1,0 +1,38 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+:root {
+	--general-black: #313239;
+	--blue-400: #a3b1f9;
+	--blue-500: #7784f7;
+	--blue-600: #4c53f4;
+	--blue-900: #2422a3;
+	--gradient-blue: linear-gradient(180deg, #4C53F4 0%, #4F75FA 100%);
+	--gradient-blue-button: linear-gradient(90deg, #4C53F4 12.3%, #4F75FA 73.41%);
+	--blue-200: #deddff;
+	--gradient-black: rgba(20, 20, 20, 0.89);
+	--gray: #ababab;
+	--color: #fff;
+
+  --title-font: "Noto Sans", sans-serif;
+  --text-font: "Heraclito", sans-serif;
+}
+
+body {
+    font-family: var(--text-font);
+		color: var(--general-black);
+		position: relative;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.button {
+	cursor: pointer;
+}
+
+
+

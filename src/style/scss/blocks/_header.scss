@@ -1,0 +1,166 @@
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color);
+  border-bottom: 1px solid var(--blue-500);
+
+	&__logo {
+    width: clamp(81px, 11vw, 158px);
+    margin-inline-start: clamp(15px, 11.4vw, 165px);
+	}
+
+	&__navbar {
+    width: clamp(300px, 36.8vw, 530px);
+	}
+
+	&__contacts {
+    width: clamp(100px, 15.2vw, 219px);
+    margin-inline-end: clamp(15px, 11.5vw, 166px);
+    text-align: right;
+    a {
+      @include font (700, clamp(12px, 1.67vw, 24px), 1.3em);
+      color: var(--blue-600);
+      display: block;
+      text-align: left;
+      letter-spacing: 0.01em;
+    }
+	}
+
+  &__button {
+    all: unset;
+    color: var(--blue-900);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    @include font (400, clamp(12px, 0.97vw, 14px), 1.25em);
+    cursor: pointer;
+  }
+
+  &__burger-button {
+      display: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      img {
+        width: 23.5px;
+      }
+  }
+}
+
+.navbar-links {
+	&_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &_burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+	}
+
+	&__link {
+    text-underline-offset: 2px;
+    transition: text-decoration-color 300ms;
+    text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+
+    &_header {
+      @include font (400, clamp(12px, 1.1vw, 16px), 1.5em);
+      color: var(--general-black);
+      &:hover {
+        text-decoration-color: var(--general-black);
+      }
+    }
+    &_burger {
+      color: var(--color);
+      @include font (400, 24px, 32px);
+      &:hover {
+        text-decoration-color: var(--color);
+      }
+		}
+	}
+}
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  width: 345px;
+  background-color: var(--general-black);
+  text-align: center;
+  padding: 24px 44px 43px 43px;
+
+		&__contacts {
+      margin-block-start: 32px;
+      a {
+        color: var(--color);
+        font-family: var(--title-font);
+        @include font (700, 20px, 28px);
+      }
+		}
+
+		&__button {
+      margin-block-start: 4px;
+      color: var(--color);
+      @include font (400, 14px, 20px);
+		}
+
+    &__close-button {
+      position: absolute;
+      right: -20px;
+      top: -12px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+}
+
+
+@media screen and (max-width: 1293px) {
+  .header {
+    min-height: 80px;
+    &__navbar {
+      width: max-content;
+    }
+    @media screen and (max-width: 984px) {
+      &__logo {
+        margin-inline-start: 5%;
+      }
+      &__contacts {
+        width: max-content;
+        margin-inline-end: 5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .header {
+    min-height: 63px;
+    
+    &__burger-button {
+      display: block;
+      margin-inline-end: 4%;
+    }
+    &__navbar {
+      display: none;
+    }
+    &__contacts {
+      display: none;
+    }
+  }
+}

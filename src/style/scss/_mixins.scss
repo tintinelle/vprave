@@ -1,0 +1,35 @@
+@mixin font ($font-weight, $font-size, $line-height) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin title-font () {
+    font-weight: 700;
+    font-size: clamp(36px, 5.97vw, 86px);
+    line-height: clamp(40px, 0.9em, 76.5px);
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+@mixin button ($width, $padding, $font-size) {
+    display: flex;
+    justify-content: center;
+    width: $width;
+    padding: $padding;
+    border-radius: 2px;
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: clamp(16px, 1.9vw, 28px);
+    border: none;
+
+    background: var(--gradient-blue-button);
+    color: var(--color);
+}
+
+@mixin number-block () {
+    width: clamp(86px, 22.5vw, 325px);
+    padding-block-start: 107px;
+}
+

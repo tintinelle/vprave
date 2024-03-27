@@ -1,0 +1,126 @@
+.popup {
+  display: none;
+  position: fixed;
+  left: 22.75%;
+  top: 15%;
+  z-index: 2;
+  width: 54.5%;
+  border-radius: 6px;
+  background-image: url(./../images/popup/background.png);
+  background-repeat: no-repeat;
+
+		&_form {
+      display: none;
+		}
+
+		&_success {
+      height: 30vw;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      display: none;
+		}
+
+    &__wrapper {
+      position: relative;
+      width: 87.3%;
+      margin: 39px auto 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+		&__title {
+      width: 97%;
+      margin-block-end: 24px;
+      margin-inline: 0 auto;
+      color: var(--color);
+      font-family: var(--title-font);
+      @include font (600, clamp(20px, 4.6vw, 36px), 1.1em);
+
+      &_success {
+        width: 100%;
+			}
+		}
+
+		&__close-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+			&_success {
+        top: -4vw;
+			}
+		}
+
+		&__description {
+      margin-block: 16px 32px;
+      color: var(--color);
+      @include font (400, clamp(16px, 3vw, 24px), 1.3em);
+		}
+
+		&__number {
+      background: var(--gradient-blue);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: var(--title-font);
+      @include font (700, clamp(24px, 3.6vw, 52px), 1.3em);
+		}
+}
+
+.modal-form {
+  width: 46.9%;
+
+		&__input-wrapper {
+      width: 100%;
+      &:last-of-type input {
+        margin-block-end: 0;
+      }
+		}
+
+		&__label {
+      width: 100%;
+      margin-inline-start: 12px;
+      @include font (400, 16px, 20px);
+      color: #DEE1E1;
+		}
+
+		&__input {
+      width: 100%;
+      margin-block-end: 12px;
+      padding: 4px 12px;
+      border-radius: 2px;
+      border: 1px solid #747070;
+      background-color: transparent;
+      color: var(--color);
+
+      &::placeholder {
+          color: var(--gray);
+          @include font (400, 14px, 24px);
+      }
+		}
+
+		&__error {
+		}
+
+		&__button {
+      @include button (100%, auto, 18px);
+      margin-block-start: 24px;
+      align-items: center;
+      height: 56px;
+
+        img {
+          width: 22px;
+          margin-block-start: 5px;
+          margin-inline-start: 8px;
+        }
+		}
+}

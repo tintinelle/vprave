@@ -1,0 +1,174 @@
+.feedbacks {
+   display: flex;
+   gap: 30px;
+   border-top: 1px solid var(--blue-400);
+   border-bottom: 1px solid var(--blue-400);
+   background-image: url(./../images/feedbacks/gavel.png);
+   background-repeat: no-repeat;
+   background-position: left 216px;
+   padding-block-end: 36px;
+
+		&__number {
+      @include number-block();
+      border-right: 1px solid var(--blue-400);
+      border-bottom: 1px solid var(--blue-400);
+
+      img:first-of-type {
+         width: clamp(45px, 34%, 111px);
+         margin-inline: auto clamp(26px, 15%, 49px);
+      }
+		}
+
+		&__content-wrapper {
+      width: 75.3%;
+      padding-inline-start: 32px;
+      padding-block-end: 56px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-left: 1px solid var(--blue-400);
+      border-bottom: 1px solid var(--blue-400);
+		}
+
+    &__title-group {
+      width: 84.5%;
+      margin-block: clamp(104px, 8.75vw, 120px) 62px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+		&__title {
+      @include title-font();
+		}
+
+		&__slider-buttons {
+      width: 228px;
+      display: flex;
+      justify-content: space-between;
+		}
+
+		&__button {
+      width: 110px;
+      height: 38px;
+      border-radius: 32px;
+      border: 1px solid var(--general-black);
+      background-color: var(--color);
+      cursor: pointer;
+
+      img {
+         margin: 0 auto;
+      }
+		}
+
+		&__cards {
+      width: 86.5%;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 2.2vw;
+      column-gap: 3.6%;
+		}
+
+		&__card {
+      position: relative;
+      width: 47%;
+      padding: 18px 17px 18px 25px;
+      margin-block-start: 33px;
+      border: 1px solid var(--general-black);
+      border-radius: 2px;
+		}
+
+		&__card-image {
+      position: absolute;
+      top: -33px;
+      right: 48px;
+		}
+
+		&__card-subtitle {
+      @include font (700, clamp(16px, 1.7em, 24px), 1.3em);
+		}
+
+		&__card-text {
+      margin-block: 8px 10px;
+      @include font (400, clamp(14px, 1.1em, 16px), 1.5em);
+		}
+
+		&__card-additional-text {
+      @include font (400, 12px, 16px);
+      color: var(--gray);
+		}
+}
+
+@media screen and (max-width: 988px) {
+   .feedbacks {
+      background-image: none;
+      padding-block-end: 0;
+
+      &__content-wrapper {
+         padding: 0;
+      }
+
+      &__cards {
+         width: 95%;
+      }
+
+      &__card {
+         padding: 11px;
+      }
+
+		&__card-image {
+         max-width: 51px;
+         top: -16px;
+         right: 9px;
+		}
+
+      &__card-subtitle {
+         font-size: 16px;
+         line-height: 24px;
+      }
+
+      &__card-text {
+         font-size: 14px;
+         line-height: 20px;
+      }
+   }
+}
+
+
+@media screen and (max-width: 509px) {
+   .feedbacks {
+      &__cards {
+         max-height: 500px;
+         overflow-y: scroll;
+      }
+
+      &__card {
+         width: 100%;
+      }
+   }
+}
+
+@media screen and (max-width: 375px) {
+   .feedbacks {
+      &__title-group {
+         margin-block-end: 26px;
+      }
+      &__title {
+         letter-spacing: normal;
+      }
+      &__cards {
+         max-height: 732px;
+         row-gap: 4.2vw;
+      }
+
+      &__card {
+         margin-block-start: 21px;
+         padding: 24.5px 11px 24.5px 17px;
+      }
+
+      &__card-image {
+         top: -18px;
+         right: 25px;
+		}
+   }
+}

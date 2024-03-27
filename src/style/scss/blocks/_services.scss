@@ -1,0 +1,158 @@
+.services {
+   width: 100%;
+   position: relative;
+   display: flex;
+   border-bottom: 1px solid var(--blue-400);
+   border-top: 1px solid var(--blue-500);
+   gap: 30px;
+   background-image: url(./../images/services/statue.png);
+   background-repeat: no-repeat;
+   background-position: right 141px;
+
+      &__gradient {
+         position: absolute;
+         top: -30%;
+         left: 0;
+         z-index: -1;
+      }
+
+		&__number {
+      @include number-block();
+      border-left: 1px solid var(--blue-400);
+      max-width: 22.5%;
+
+      img:first-of-type {
+         width: clamp(45px, 34%, 111px);
+         margin-inline: clamp(26px, 15%, 49px) auto;
+      }
+		}
+
+		&__content-wrapper {
+      width: clamp(268px, 75.3%, 1585px);
+      padding-block-end: clamp(84px, 9vw, 130px);
+      border-right: 1px solid var(--blue-400);
+		}
+
+		&__title {
+      @include title-font();
+      margin-block: clamp(104px, 7.8vw, 113px) clamp(32px, 4.2vw, 60px);
+      margin-inline-start: clamp(15px, 11.2vw, 162px);
+		}
+
+		&__cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2vw;
+      width: 57.7vw;
+      margin-inline-start: clamp(15px, 11.2vw, 162px);
+		}
+
+		&__card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: flex-end;
+      justify-content: space-between;
+      width: clamp(245.31px, 48%, 400px);
+      height: clamp(246px, 17.7vw, 256px);
+      color: var(--color);
+      background-repeat: no-repeat;
+      background-color: #fff;
+      background-blend-mode: luminosity;
+
+      &_one {
+         background-image: url(./../images/services/bankruptcy-of-citizens.png);
+      }
+      &_two {
+         background-image: url(./../images/services/bankruptcy-of-legal-entities.png);
+      }
+      &_three {
+         background-image: url(./../images/services/bankruptcy-of-sole-proprietors.png);
+      }
+      &_four {
+         background-image: url(./../images/services/legal-support.png);
+      }
+
+      &:hover {
+         background-blend-mode: normal; 
+      }
+		}
+
+		&__subtitle {
+      width: max-content;
+      margin-inline-start: 18px;
+      margin-block-end: 4px;
+      @include font (700, clamp(16px, 1.6vw, 24px), 1.3em);
+		}
+
+		&__more-button {
+      @include button (41px, 4px 13px, 14px);
+      margin-right: 18px;
+		}
+
+		&__description {
+      width: clamp(214px, 71.5%, 286px);
+      min-height: 60px;
+      margin-inline-start: 18px;
+      margin-block-end: 13px;
+      @include font (400, clamp(12px, 1em, 14px), 1.4em);
+		}
+}
+
+@media screen and (max-width: 883px) {
+   .services {
+		&__card {
+         width: 80%;
+		}
+   }
+}
+
+@media screen and (max-width: 545px) {
+      .services {
+         background-image: none;
+         gap: 21px;
+
+		&__title {
+         margin-inline-start: 15px;
+		}
+
+		&__cards {
+         width: 93%;
+         margin-inline-start: 15px;
+         gap: 32px;
+		}
+
+		&__card {
+         width: 100%;
+         height: 42vw;
+         @media screen and (max-width: 375px) {
+         &_one {
+            background-image: url(./../images/services/bankruptcy-of-citizens-mob.png);
+         }
+         &_two {
+            background-image: url(./../images/services/bankruptcy-of-legal-entities-mob.png);
+         }
+         &_three {
+            background-image: url(./../images/services/bankruptcy-of-sole-proprietors-mob.png);
+         }
+         &_four {
+            background-image: url(./../images/services/legal-support-mob.png);
+         }
+         }
+		}
+
+		&__more-button {
+         background: none;
+         padding: 0;
+         img {
+            width: 25px;
+         }
+		}
+
+		&__description {
+         min-height: 28px;
+         font-size: 12px;
+         line-height: 16px;
+		}
+   }
+}

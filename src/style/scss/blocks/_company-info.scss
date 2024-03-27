@@ -1,0 +1,74 @@
+.company-info {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--blue-400);
+
+  &__item {
+    @include font (400, clamp(16px, 1.6vw, 24px), 1.3em);
+    padding-block: 21px;
+    border-right: 1px solid var(--blue-400);
+    img {
+      max-height: 77px;
+      margin-block-end: 12px;
+    }
+
+    &_one {
+      width: 31.25%;
+      padding-inline-end: 47px;
+      text-align: right;
+      img {
+        margin-inline: auto 0;
+        max-width: 41.5%;
+      }
+    }
+
+    &_two {
+      width: 19.3%;
+      text-align: center;
+      img {
+        margin: 0 auto;
+        max-width: 84%;
+      }
+    }
+
+    &_three {
+      width: 18.5%;
+      text-align: center;
+      img {
+        margin: 0 auto;
+        max-width: 52.4%;
+      }
+    }
+
+    &_four {
+      width: 30.95%;
+      padding-inline-start: 33px;
+      text-align: left;
+      border-right: none;
+      img {
+        margin-inline: 0 auto;
+        max-width: 48%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .company-info {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+		&__item {
+      width: 100%;
+      text-align: center;
+      padding: 25px 20px;
+      border-bottom: 1px solid var(--blue-400);
+
+      img {
+        margin: 0 auto 6px;
+        max-height: 28px;
+      }
+		}
+  }
+}

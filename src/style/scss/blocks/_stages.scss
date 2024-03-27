@@ -1,0 +1,232 @@
+.stages {
+  display: flex;
+  gap: clamp(20px, 2.1vw, 31px);
+
+		&__number {
+      @include number-block();
+      border-right: 1px solid var(--blue-400);
+      border-bottom: 1px solid var(--blue-400);
+
+      img:first-of-type {
+        width: clamp(45px, 34%, 111px);
+        margin-inline: auto clamp(26px, 15%, 49px);
+      }
+		}
+
+		&__content-wrapper {
+      width: clamp(268px, 75.3%, 1084px);
+      border-left: 1px solid var(--blue-400);
+      border-bottom: 1px solid var(--blue-400);
+		}
+
+		&__title {
+      @include title-font();
+      margin-block-start: clamp(104px, 7.8vw, 114px);
+      margin-inline-start: clamp(16px, 2.2vw, 32px);
+		}
+
+		&__steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: clamp(256px, 62.1vw, 895px);
+      margin-inline-start: 24px;
+      margin-block-start: clamp(40px, 4.3vw, 62px);
+		}
+
+		&__step {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+      gap: 16px;
+
+      &_one {
+        width: 33.7%;
+        order: 1;
+        margin-inline-start: 24px;
+      }
+
+      &_two {
+        width: 32.6%;
+        order: 3;
+        margin-block-start: 68px;
+        margin-inline-start: 122px;
+      }
+
+      &_three {
+        width: 38.5%;
+        margin-inline-end: 102px;
+        order: 2;
+      }
+
+      &_four {
+        width: 32.5%;
+        order: 4;
+        margin-inline-end: 89px;
+        margin-block-start: 64px;
+      }
+		}
+
+		&__subtitle {
+      letter-spacing: -0.05em;
+      font-family: var(--title-font);
+      background: var(--gradient-blue);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font (600, clamp(20px, 2.5vw, 36px), 1.1em);
+		}
+
+		&__text {
+      @include font (400, 16px, 24px);
+      margin: 0 auto;
+      max-width: 89%;
+
+      &_four {
+          max-width: 78%;
+        }
+		}
+
+		&__vector {
+      position: absolute;
+
+			&_one-two {
+        top: 97%;
+        right: 68%;
+			}
+
+			&_two-three {
+        bottom: 15%;
+        left: 89%;
+			}
+
+			&_three-four {
+        top: 83%;
+        left: 92%;
+			}
+		}
+
+		&__button {
+      @include button (clamp(190px, 24.1%, 216px), 14px 24px, 18px);
+      margin: 32px 33.5% 40px;
+
+        img {
+          width: 22px;
+          align-self: flex-end;
+        }
+		}
+}
+
+@media screen and (min-width: 1500px) {
+  .stages {
+		&__content-wrapper {
+      margin: 0 auto;
+		}
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .stages {
+		&__steps {
+      width: 100%;
+		}
+
+    &__button {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .stages {
+		&__steps {
+      justify-content: center;
+      gap: 10px;
+      margin-inline-start: 0;
+		}
+		&__step {
+      width: 45%;
+
+			&_one {
+        margin-inline-start: 0;
+			}
+
+			&_two {
+        order: 2;
+        margin-block-start: 0;
+        margin-inline-start: 0;
+			}
+
+			&_three {
+        order: 3;
+        margin-inline-end: 0;
+			}
+
+			&_four {
+        margin-block-start: 0;
+        margin-inline-end: 0;
+			}
+		}
+
+		&__vector {
+    display: none;
+		}
+
+    &__button {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stages {
+    &__title {
+      margin-block-start: 70px;
+		}
+
+		&__steps {
+      flex-direction: column;
+      gap: 41px;
+    }
+
+    &__step {
+      width: 94%;
+      gap: 13px;
+      img {
+        width: 90px;
+        margin: 0 auto 3px;
+      }
+    }
+
+    &__text {
+      // max-width: 85%;
+      max-width: 100%;
+
+      &_one{
+        max-width: 89%;
+      }
+            &_two{
+        max-width: 100%;
+      }
+            &_three{
+        max-width: 100% ;
+      }
+            &_four{
+        max-width: 100% ;
+        width: 100%;
+      }
+    }
+
+    &__button {
+      min-height: 56px;
+      width: 70%;
+      margin-inline-start: 33px;
+      padding: 20px;
+    }
+
+  }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/style.css"/>
+    <title>ВПРАВЕ</title>
+</head>
+
+<body>
+
+<header class="header">
+    <img src="./src/images/icons/logo.svg" alt="Вправе - юридическая компания" class="header__logo">
+    <nav class="header__navbar">
+        <ul class="navbar-links navbar-links_header">
+            <li><a class="navbar-links__link navbar-links__link_header" href="#about">О нас</a></li>
+            <li><a class="navbar-links__link navbar-links__link_header" href="#services">Услуги</a></li>
+            <li><a class="navbar-links__link navbar-links__link_header" href="#stages">Этапы работы</a></li>
+            <li><a class="navbar-links__link navbar-links__link_header" href="#results">Результаты</a></li>
+            <li><a class="navbar-links__link navbar-links__link_header" href="#feedbacks">Отзывы</a></li>
+            <li><a class="navbar-links__link navbar-links__link_header" href="#form-section">Оставить заявку</a></li>
+        </ul>
+    </nav>
+    <div class="header__contacts">
+        <a href="tel:+79208030659">+7 (920) 803 06 59</a>
+        <button class="header__button button">Заказать обратный звонок</button>
+    </div>
+
+    <button class="header__burger-button">
+        <img src="./src/images/icons/burger-menu.svg" alt="Закрыть">
+    </button>
+
+    <div class="burger-menu" id="burderMenu">
+        <ul class="navbar-links navbar-links_burger">
+            <button class="burger-menu__close-button">
+                <img src="./src/images/icons/xmark.svg" alt="Закрыть">
+            </button>
+            <li><a class="navbar-links__link navbar-links__link_burger" href="#about">О нас</a></li>
+            <li><a class="navbar-links__link navbar-links__link_burger" href="#services">Услуги</a></li>
+            <li><a class="navbar-links__link navbar-links__link_burger" href="#stages">Этапы работы</a></li>
+            <li><a class="navbar-links__link navbar-links__link_burger" href="#results">Результаты</a></li>
+            <li><a class="navbar-links__link navbar-links__link_burger" href="#feedbacks">Отзывы</a></li>
+            <li><a class="navbar-links__link navbar-links__link_burger" href="#form-section">Оставить заявку</a></li>
+        </ul>
+        <div class="burger-menu__contacts">
+            <a href="tel:+79208030659">+7 (920) 803 06 59</a>
+            <button class="header__button button burger-menu__button">Заказать обратный звонок</button>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="promo">
+        <div class="promo__text-group">
+            <h1 class="promo__title"><span class="promo__title promo__title_blue">Помогаем списать кредиты</span> законно по 127-ФЗ.</h1>
+            <p class="promo__description">Работаем с любым видом сложности. Поможем сохранить имущество и начать новую жизнь!</p>
+            <button class="promo__button button">Оставить заявку
+                <img src="./src/images/icons/arrow.svg" alt="">
+            </button>
+        </div>
+    </section>    
+
+    <section class="about" id="about">
+        <img src="./src/images/about/about-gradient.png" alt="" class="about__gradient">
+        <div class="about__number">
+            <img src="./src/images/about/02.svg" alt="Номер 2">
+        </div>
+        <div class="about__content-wrapper">
+            <h2 class="about__title">О нас</h2>
+            <div class="about__description">
+                <p class="about__description-item">Наша компания работает <span class="bold-text">с 2002 года</span> в сфере банкротства юридических лиц, <span class="bold-text">с 2014
+                года</span> оказываем весь спектр услуг при процедуре банкротства (в том числе физических лиц). За время нашей работы в области банкротства, <span class="bold-text">мы разработали множество действенных стратегий и методов</span>, которые помогают нам успешно преодолевать различные трудности и препятствия.</p>
+                <p class="about__description-item"><span class="bold-text">Главными принципами</span> для нас являются изучение всех деталей дела, соблюдение конфиденциальности и высокий уровень защиты каждого клиента.</p>
+                <p class="about__description-item">В нашей команде <span class="bold-text">работают квалифицированные специалисты</span> самого различного профиля: юристы по банкротству, оценщики, арбитражные управляющие и адвокаты.</p>
+            </div>
+            <button class="about__button button">Получить бесплатную консультацию 
+                <img src="./src/images/icons/arrow.svg" alt="">
+            </button>
+            <div class="about__images">
+                <img src="./src/images/about/about-1.png" alt="Девушка в офисе с документами">
+                <img src="./src/images/about/about-2.png" alt="Девушка в офисе в костюме">
+                <img src="./src/images/about/about-3.png" alt="Девушка в офисной одежде на улице">
+            </div>
+        </div>
+    </section>
+
+    <section class="talking-points talking-points_first">
+        <p class="talking-points__item">Законное списание кредитов в Москве и по всей России.</p>
+        <p class="talking-points__item talking-points__item_blue">Решим вашу проблему</p>
+        <p class="talking-points__item">И избавим вас от долговой ямы</p>
+    </section>
+
+    <section class="services" id="services">
+        <img src="./src/images/services/services-gradient.png" alt="" class="services__gradient">
+        <div class="services__content-wrapper">
+            <h2 class="services__title">Услуги</h2>
+            <div class="services__cards">
+                <div class="services__card services__card_one">
+                    <h3 class="services__subtitle">Банкротство граждан</h3>
+                    <button class="services__more-button button">
+                        <img src="./src/images/icons/arrow-right.svg" alt="Кнопка подробнее">
+                    </button>
+                    <p class="services__description">Процедура, которая позволит снизить финансовую нагрузку или полностью списать долги.</p>
+                </div>
+                <div class="services__card services__card_two">
+                    <h3 class="services__subtitle">Банкротство ИП</h3>
+                    <button class="services__more-button button">
+                        <img src="./src/images/icons/arrow-right.svg" alt="Кнопка подробнее">
+                    </button>
+                    <p class="services__description">Применяются правила, установленные для банкротства граждан, с учётом особенностей, установленных для ИП.</p>
+                </div>
+                <div class="services__card services__card_three">
+                    <h3 class="services__subtitle">Банкротство  юр. лиц</h3>
+                    <button class="services__more-button button">
+                        <img src="./src/images/icons/arrow-right.svg" alt="Кнопка подробнее">
+                    </button>
+                    <p class="services__description">Банкротство юридических лиц – это неспособность организации полностью удовлетворить требования кредиторов.</p>
+                </div>
+                <div class="services__card services__card_four">
+                    <h3 class="services__subtitle">Юр. Сопровождение</h3>
+                    <button class="services__more-button button">
+                        <img src="./src/images/icons/arrow-right.svg" alt="Кнопка подробнее">
+                    </button>
+                    <p class="services__description">Полное сопровождение под ключ.</p>
+                </div>
+            </div>
+        </div>
+        <div class="services__number">
+            <img src="./src/images/services/03.svg" alt="Номер 3">
+        </div>
+    </section>
+
+    <section class="company-info">
+        <div class="company-info__item company-info__item_one">
+            <img src="./src/images/company-info/780.svg" alt="Более семисот восьмидесяти">
+            <p>выигранных дел</p>
+        </div>
+        <div class="company-info__item company-info__item_two">
+            <img src="./src/images/company-info/1000.svg" alt="Более тысячи">
+            <p>довольных клиентов</p>
+        </div>
+        <div class="company-info__item company-info__item_three">
+            <img src="./src/images/company-info/20.svg" alt="Более двадцати">
+            <p>лет опыта работы</p>
+        </div>
+        <div class="company-info__item company-info__item_four">
+            <img src="./src/images/company-info/100.svg" alt="Сто процентов">
+            <p>Без переплат</p>
+        </div>
+    </section>
+
+    <section class="stages" id="stages">
+        <div class="stages__number">
+            <img src="./src/images/stages/04.svg" alt="Номер 4">
+        </div>
+        <div class="stages__content-wrapper">
+            <h2 class="stages__title">Этапы работы</h2>
+            <div class="stages__steps">
+                <div class="stages__step stages__step_one">
+                    <img src="./src/images/stages/1.svg" alt="Шаг 1">
+                    <h3 class="stages__subtitle">Онлайн-заявка</h3>
+                    <p class="stages__text stages__text_one">Заполняете заявку на получение консультации и мы перезвоним Вам в ближайшее время</p>
+                    <img src="./src/images/stages/1-2.svg" alt="" class="stages__vector stages__vector_one-two">
+                </div>
+                <div class="stages__step stages__step_two">
+                    <img src="./src/images/stages/2.svg" alt="Шаг 2">
+                    <h3 class="stages__subtitle">Встреча</h3>
+                    <p class="stages__text stages__text_two">Личная встреча с юристом или онлайн-консультация с одним из наших специалистов</p>
+                    <img src="./src/images/stages/2-3.svg" alt="" class="stages__vector stages__vector_two-three">
+                </div>
+                <div class="stages__step stages__step_three">
+                    <img src="./src/images/stages/3.svg" alt="Шаг 3">
+                    <h3 class="stages__subtitle">Подбор стратегии</h3>
+                    <p class="stages__text stages__text_three">Собираем необходимые документы и подаём заявление на списание задолженности в Арбитражный суд</p>
+                    <img src="./src/images/stages/3-4.svg" alt="" class="stages__vector stages__vector_three-four">
+                </div>
+                <div class="stages__step stages__step_four">
+                    <img src="./src/images/stages/4.svg" alt="Шаг 4">
+                    <h3 class="stages__subtitle">Свобода</h3>
+                    <p class="stages__text stages__text_four">Спокойная жизнь без долгов и звонков коллекторов!</p>
+                </div>
+            </div>
+            <button class="stages__button button">Оставить заявку
+                <img src="./src/images/icons/arrow.svg" alt="">
+            </button>
+        </div>
+    </section>
+
+    <section class="results" id="results">
+        <img src="./src/images/results/results-gradient.png" alt="" class="results__gradient">
+        <div class="results__content-wrapper">
+            <div class="results__name-group">
+                <h2 class="results__title">Результаты</h2>
+                <div class="results__slider-buttons">
+                    <button class="results__button results__button_prev" id="resultsLeft">
+                        <img src="./src/images/icons/prev.svg" alt="Предыдущий слайд кнопка">
+                    </button>
+                    <button class="results__button results__button_next" id="resultsRight">
+                        <img src="./src/images/icons/next.svg" alt="Следующий слайд кнопка">
+                    </button>
+                </div>
+            </div>
+            <div class="results__number">
+                <img src="./src/images/results/05.svg" alt="Номер 5">
+            </div>
+            <div class="results__slider">
+                <div class="results__slide">
+                    <img src="" alt="Фото документа" class="results__slide-image">
+                    <p class="results__slide-subtitle">Списанная задолженность:</p>
+                    <p class="results__slide-text results__slide-text_debt"></p>
+                    <p class="results__slide-subtitle">Решение по делу:</p>
+                    <p class="results__slide-text results__slide-text_decision"></p>
+                    <p class="results__slide-subtitle">Дата завершения:</p>
+                    <p class="results__slide-text results__slide-text_date"></p>
+                    <p class="results__slide-subtitle">Статус должника:</p>
+                    <p class="results__slide-text results__slide-text_status"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="talking-points talking-points_second">
+        <br class="talking-points__item"><span class="talking-points__item talking-points__item_blue">Полное списание долгов</span> в Москве</br>и по всей России, <span class="talking-points__item talking-points__item_blue">не выходя из дома.</span></p>
+        <p class="talking-points__item">Оплата за результат!</p>
+        <p class="talking-points__item">Гарантия в договоре.</p>
+    </section>
+
+    <section class="feedbacks" id="feedbacks">
+        <div class="feedbacks__number">
+            <img src="./src/images/feedbacks/06.svg" alt="Номер 6">
+        </div>
+        <div class="feedbacks__content-wrapper">
+            <div class="feedbacks__title-group">
+                <h2 class="feedbacks__title">Отзывы</h2>
+                <div class="feedbacks__slider-buttons">
+                    <button class="feedbacks__button feedbacks__button_prev">
+                        <img src="./src/images/icons/prev.svg" alt="Предыдущий слайд кнопка">
+                    </button>
+                    <button class="feedbacks__button feedbacks__button_next">
+                        <img src="./src/images/icons/next.svg" alt="Следующий слайд кнопка">
+                    </button>
+                </div>
+            </div>
+            <div class="feedbacks__cards">
+                <div class="feedbacks__card">
+                    <img class="feedbacks__card-image" src="./src/images/feedbacks/quotes.svg" alt="">
+                    <h3 class="feedbacks__card-subtitle">Гергерт В.П.</h3>
+                    <p class="feedbacks__card-text">Выражаю огромную благодарность специалистам, проявившим высокий профессионализм и умение находить оптимальные решения в сложных ситуациях. Благодаря их помощи, мне удалось избавиться от долгов и начать жизнь с чистого листа. Рекомендую данную компанию всем, кто нуждается в услугах по банкротству.</p>
+                    <p class="feedbacks__card-additional-text">Дело о банкротстве №А50-111449/22</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="form-section">
+        <img src="./src/images/form/form-section-gradient.png" alt="" class="form-section__gradient">
+        <div class="form-section__content-wrapper">
+            <h2 class="form-section__title">Оставить заявку</h2>
+            <p class="form-section__description">Наши специалисты обязательно с Вами свяжутся для консультации и оказания помощи.</p>
+            <img class="form-section__image" src="./src/images/form/handshake.png" alt="Рукопожатие">
+            <form class="form">
+                <div class="form__input-wrapper">
+                    <label class="form__label" for="formName">Ваше имя</label>
+                    <input type="text" name="name" id="formName" class="form__input" placeholder="Введите имя" required>
+                    <span class="form__error"></span>
+                </div>
+                <div class="form__input-wrapper">
+                    <label class="form__label" for="formNumber">Ваш номер телефона</label>
+                    <input type="text" name="number" id="formNumber" class="form__input" placeholder="Введите номер телефона" required>
+                    <span class="form__error"></span>
+                </div>
+                <div class="form__input-wrapper">
+                    <label class="form__label" for="formMessage">Ваш вопрос</label>
+                    <span class="form__additional-info">0/300</span>
+                    <textarea rows="4" type="text" name="message" id="formMessage" class="form__input" placeholder="Опишите Вашу проблему"></textarea>
+                    <span class="form__error"></span>
+                </div>
+                <button type="submit" class="form__button button">Отправить заявку
+                    <img src="./src/images/icons/arrow.svg" alt="">
+                </button>
+            </form>
+        </div>
+        <div class="form-section__number">
+            <img src="./src/images/form/07.svg" alt="Номер 7">
+        </div>
+    </section>
+
+    <div class="popup popup_form">
+        <div class="popup__wrapper">
+            <h2 class="popup__title">Укажите Ваши данные для связи и получите консультацию юриста</h2>
+            <button class="popup__close-button">
+                <img src="./src/images/icons/xmark.svg" alt="Закрыть">
+            </button>
+            <form class="modal-form">
+                <div class="modal-form__input-wrapper">
+                    <label class="modal-form__label" for="modalFormName">Ваше имя</label>
+                    <input type="text" name="name" id="modalFormName" class="modal-form__input" placeholder="Введите имя" required>
+                    <span class="modal-form__error"></span>
+                </div>
+                <div class="modal-form__input-wrapper">
+                    <label class="modal-form__label" for="modalFormNumber">Ваш номер телефона</label>
+                    <input type="text" name="number" id="modalFormNumber" class="modal-form__input" placeholder="Введите номер телефона" required>
+                    <span class="modal-form__error"></span>
+                </div>
+
+                <div class="modal-form__input-wrapper">
+                    <label class="modal-form__label" for="modalFormCity">Из какого Вы города</label>
+                    <input type="text" name="city" id="modalFormCity" class="modal-form__input" placeholder="Введите город" required>
+                    <span class="modal-form__error"></span>
+                </div>
+
+                <button type="submit" class="modal-form__button">Отправить заявку
+                    <img src="./src/images/icons/arrow.svg" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_success">
+        <div class="popup__wrapper">
+            <button class="popup__close-button popup__close-button_success">
+                <img src="./src/images/icons/xmark.svg" alt="Закрыть">
+            </button>
+            <h2 class="popup__title popup__title_success">Спасибо за заявку!</h2>
+            <p class="popup__description">Ожидайте звонка нашего юриста в течение 3 минут с номера</p>
+            <a class="popup__number" href="tel:+79208030659">+7 (920) 803 06 59</a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <nav class="footer__navbar">
+        <img src="./src/images/icons/logo.svg" alt="Вправе - юридическая компания" class="footer__logo">
+        <ul class="navbar-links navbar-links_footer">
+            <li><a class="navbar-links__link navbar-links__link_footer" href="#about">О нас</a></li>
+            <li><a class="navbar-links__link navbar-links__link_footer" href="#services">Услуги</a></li>
+            <li><a class="navbar-links__link navbar-links__link_footer" href="#stages">Этапы работы</a></li>
+            <li><a class="navbar-links__link navbar-links__link_footer" href="#results">Результаты</a></li>
+            <li><a class="navbar-links__link navbar-links__link_footer" href="#feedbacks">Отзывы</a></li>
+            <li><a class="navbar-links__link navbar-links__link_footer" href="#form-section">Оставить заявку</a></li>
+        </ul>
+    </nav>
+    <div class="footer__contacts">
+        <a class="footer__tel" href="tel:+79208030659">+7 (920) 803 06 59</a>
+        <button class="footer__button button">Заказать обратный звонок</button>
+        
+        <div class="footer__contacts-group">
+            <p class="footer__subtitle">Электронная почта:</p>
+            <a class="footer__text" href="mailto:a-logistic.help@yandex.ru">a-logistic.help@yandex.ru</a>
+        </div>
+
+        <div class="footer__contacts-group">
+            <p class="footer__subtitle">Адрес:</p>
+            <p class="footer__text">Ростов-на-Дону </p>
+            <p class="footer__text">улица,  дом,  офис и тд</p>
+        </div>
+
+        <div class="footer__contacts-group">
+            <p class="footer__subtitle">Реквизиты:</p>
+            <p class="footer__text">ООО «А ЛОГИСТИК»</p>
+            <p class="footer__text">ИНН 9725035399</p>
+            <p class="footer__text">КПП 772501001</p>
+            <p class="footer__text">ОГРН 1207700308804</p>
+        </div>
+
+        <div class="footer_social-media">
+            <a target="blank" href="https://vk.com/"><img src="./src/images/icons/vk.svg" alt="ВКонтакте"></a>
+            <a target="blank" href="https://telegram.org/"><img src="./src/images/icons/telegram.svg" alt="Телеграм"></a>
+            <a target="blank" href="https://www.instagram.com/"><img src="./src/images/icons/instagram.svg" alt="Инстаграм"></a>
+        </div>
+    </div>
+
+    <div class="footer__map">
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/vprave/95214957557/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Вправе</a><a href="https://yandex.ru/maps/213/moscow/category/legal_services/184105630/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Юридические услуги в Москве</a><a href="https://yandex.ru/maps/213/moscow/category/attorney/184105616/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Адвокаты в Москве</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.576007%2C55.772289&mode=search&oid=95214957557&ol=biz&z=16.33" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;" class="footer__map-item"></iframe></div>
+    </div>
+
+    <div class="footer__links">
+        <a class="footer__link" target="blank" href="#">Политика конфиденциальности</a>
+        <a class="footer__link" target="blank" href="#">Договор оферты</a>
+        <p class="footer__info-text">Все права защищены</p>
+    </div>
+
+</footer>
+
+<script src="src/script/index.js"></script>
+</body>
+
+</html>

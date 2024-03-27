@@ -1,0 +1,118 @@
+.about {
+  display: flex;
+  gap: 11px;
+  position: relative;
+    &__gradient {
+      position: absolute;
+      top: -25%;
+      right: 0;
+      z-index: -1;
+    }
+		&__number {
+      @include number-block();
+      border-right: 1px solid var(--blue-500);
+      border-bottom: 1px solid var(--blue-500);
+
+      img:first-of-type {
+        width: clamp(45px, 34%, 111px);
+        margin-inline: auto clamp(26px, 15%, 49px);
+      }
+		}
+
+		&__content-wrapper {
+      width: clamp(268px, 78.8vw, 1104px);
+      border-left: 1px solid var(--blue-500);
+      border-bottom: 1px solid var(--blue-500);
+		}
+
+		&__title {
+      @include title-font();
+      margin-block: clamp(104px, 7.8vw, 113px) 57px;
+      margin-inline-start: clamp(16px, 3.75vw, 54px);
+		}
+
+		&__description {
+      @include font(400, clamp(16px, 1.25vw, 18px), 1.5em);
+      margin-inline-start: clamp(16px, 3.75vw, 54px);
+		}
+
+		&__description-item {
+      width: clamp(237px, 81.4%, 858px);
+      margin-block: 24px;
+
+      &:nth-of-type(2) {
+        width: clamp(237px, 84.4%, 888px);
+        margin-block-start: 30px; 
+      }
+
+      &:nth-of-type(3) {
+        margin-block-end: 14px; 
+      }
+    }
+
+		&__button {
+      @include button (clamp(227px, 37.3%, 392px), clamp(12px, 1vw, 14px) clamp(7.5px, 1.6vw, 24px), clamp(12px, 1.25vw, 18px));
+      margin-inline-start: clamp(16px, 3.75vw, 54px);
+      margin-block-end: clamp(14px, 3vw, 44px);
+      gap: 5px;
+
+        img {
+          width: 22px;
+          align-self: flex-end;
+        }
+		}
+
+		&__images {
+      display: flex;
+      gap: clamp(5px, 1.18vw, 17px);
+
+      img {
+        max-width: 24.3vw;
+      }
+		}
+}
+
+@media screen and (max-width: 375px) {
+  .about {
+    gap: 21px;
+
+		&__number {
+      min-width: 86px;
+		}
+
+		&__content-wrapper {
+      max-width: 268px;
+		}
+
+		&__title {
+      margin-block-end: 32px;
+		}
+
+		&__description-item {
+      width: 92%;
+      &:nth-of-type(2) {
+        width: 82%;
+        margin-block-start: 24px; 
+      }
+		}
+
+		&__button {
+      img {
+        display: none;
+      }
+		}
+
+		&__images {
+      overflow-x: scroll;
+      img {
+        width: 71.6%;
+        min-width: 192px;
+        filter: grayscale(100%);
+
+        &:hover {
+          filter: none; 
+        }
+      }
+		}
+}
+}
