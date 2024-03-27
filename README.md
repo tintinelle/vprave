@@ -8,9 +8,8 @@
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg" alt="JavaScript" width="80rem"/>
 </p>
 
-
 ## Результат
-<a href="[https://www.otgadaymelody.ru/?demoVersion=true](https://tintinelle.github.io/vprave/)">Нажми сюда</a>
+<a href="https://tintinelle.github.io/vprave/">Нажми сюда</a>
 
 
 
