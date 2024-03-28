@@ -121,16 +121,26 @@
 
 @media screen and (min-width: 1500px) {
   .stages {
+    &__number {
+      flex-grow: 1;
+    }
 		&__content-wrapper {
       margin: 0 auto;
+      flex-grow: 1;
 		}
+    &__steps, &__title {
+      margin-inline-start: 7vw;
+    }
+    &__button {
+      width: 30%;
+    }
   }
 }
 
 @media screen and (max-width: 1350px) {
   .stages {
 		&__steps {
-      width: 100%;
+      width: 95%;
 		}
 
     &__button {

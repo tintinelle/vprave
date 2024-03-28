@@ -1,110 +1,131 @@
 .popup {
-  display: none;
-  position: fixed;
-  left: 22.75%;
-  top: 15%;
-  z-index: 2;
-  width: 54.5%;
-  border-radius: 6px;
-  background-image: url(./../images/popup/background.png);
-  background-repeat: no-repeat;
+   display: none;
+   position: fixed;
+   left: 22.75%;
+   top: 5%;
+   z-index: 2;
+   width: 54.5%;
+   max-height: 80vh;
+   overflow-y: auto;
+   border-radius: 6px;
+   background-image: url(./../images/popup/background.png);
+   background-size: cover;
+   background-repeat: no-repeat;
 
 		&_form {
-      display: none;
+         padding: 39px 51px 48px;
+         display: none;
 		}
 
 		&_success {
-      height: 30vw;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      display: none;
+         height: 30vw;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         display: none;
 		}
 
-    &__wrapper {
-      position: relative;
-      width: 87.3%;
-      margin: 39px auto 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+      &__wrapper {  
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-inline-end: 31px;
+
+         &_success {
+            width: 87%;
+            margin: 0 auto;
+         }
+      }
 
 		&__title {
-      width: 97%;
-      margin-block-end: 24px;
-      margin-inline: 0 auto;
-      color: var(--color);
-      font-family: var(--title-font);
-      @include font (600, clamp(20px, 4.6vw, 36px), 1.1em);
+         margin-block-end: 24px;
+         margin-inline: 0 auto;
+         color: var(--color);
+         font-family: var(--title-font);
+         @include font (600, clamp(20px, 4.6vw, 36px), 1.1em);
+         text-align: center;
+         @media screen and (max-width: 1200px) {
+            font-size: 28px;
+         }
 
       &_success {
-        width: 100%;
-			}
+         width: 100%;
+         margin-block-end: 0;
+         letter-spacing: -0.05em;
 		}
+	}
 
 		&__close-button {
       position: absolute;
-      right: 0;
+      right: -36px;
       top: 0;
       background-color: transparent;
       border: none;
       cursor: pointer;
       img {
-        width: 24px;
-        height: 24px;
+         width: 24px;
+         height: 24px;
       }
 
 			&_success {
-        top: -4vw;
+            top: -6vw;
+            right: -7px;
+            @media screen and (max-width: 1330px) {
+               top: -35px;
+            }
 			}
 		}
 
 		&__description {
-      margin-block: 16px 32px;
-      color: var(--color);
-      @include font (400, clamp(16px, 3vw, 24px), 1.3em);
+         margin-block: 16px 32px;
+         color: var(--color);
+         @include font (400, clamp(16px, 3vw, 24px), 1.3em);
 		}
 
 		&__number {
-      background: var(--gradient-blue);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-family: var(--title-font);
-      @include font (700, clamp(24px, 3.6vw, 52px), 1.3em);
+         background: var(--gradient-blue);
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-family: var(--title-font);
+         @include font (700, clamp(24px, 3.6vw, 52px), 1.3em);
 		}
 }
 
 .modal-form {
-  width: 46.9%;
+   width: 49%;
+   margin: 0 auto;
+   @media screen and (max-width: 1080px) {
+      width: 80%;
+   }
 
 		&__input-wrapper {
       width: 100%;
       &:last-of-type input {
-        margin-block-end: 0;
+         margin-block-end: 0;
       }
 		}
 
 		&__label {
-      width: 100%;
-      margin-inline-start: 12px;
-      @include font (400, 16px, 20px);
-      color: #DEE1E1;
+         width: 100%;
+         margin-inline-start: 12px;
+         @include font (400, 16px, 20px);
+         color: #DEE1E1;
 		}
 
 		&__input {
-      width: 100%;
-      margin-block-end: 12px;
-      padding: 4px 12px;
-      border-radius: 2px;
-      border: 1px solid #747070;
-      background-color: transparent;
-      color: var(--color);
+         width: 100%;
+         margin-block-end: 8px;
+         padding: 4px 12px;
+         border-radius: 2px;
+         border: 1px solid #747070;
+         background-color: transparent;
+         color: var(--color);
 
       &::placeholder {
-          color: var(--gray);
-          @include font (400, 14px, 24px);
+         color: var(--gray);
+         @include font (400, 14px, 24px);
       }
 		}
 
@@ -112,15 +133,113 @@
 		}
 
 		&__button {
-      @include button (100%, auto, 18px);
-      margin-block-start: 24px;
-      align-items: center;
-      height: 56px;
+         @include button (100%, auto, 18px);
+         margin-block-start: 24px;
+         align-items: center;
+         height: 56px;
 
-        img {
-          width: 22px;
-          margin-block-start: 5px;
-          margin-inline-start: 8px;
-        }
-		}
+         img {
+            width: 22px;
+            margin-block-start: 5px;
+            margin-inline-start: 8px;
+         }
+      }
+
+      &__error-message {
+         color: rgb(222, 43, 43);
+         margin-block: 10px 10px;
+      }
+}
+
+@media screen and (max-width: 900px) {
+   .popup {
+      padding: 40px 19px 49px;
+
+      &_success {
+         height: 40vw;
+      }
+
+      &__wrapper {  
+         margin-inline-end: 0;
+         &_success {
+            width: 100%;
+         }
+      }
+
+      &__title {
+         width: 80%;
+         margin: 0 auto;
+         font-size: 20px;
+         line-height: 28px;
+
+         &_success {
+            font-size: 22px;
+         }
+      }
+
+      &__description {
+         font-size: 18px;
+      }
+
+      &__close-button {
+         right: 5px;
+         top: -25px;
+         img {
+            width: 20px;
+            height: 20px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 627px) {
+   .popup {
+      width: 92%;
+      left: 4%;
+      top: 2%;
+
+      &_success {
+         height: auto;
+         min-height: 257px;
+      }
+
+      &__wrapper {  
+         &_success {
+            gap: 8px;
+         }
+      }
+
+      &__title {
+         width: 85%;
+         letter-spacing: -0.05em;
+
+         &_success {
+            font-size: 20px;
+         }
+      }
+
+      &__description {
+         font-size: 16px;
+         margin-block: 0;
+      }
+
+      &__close-button {
+         right: -1px;
+         top: -28px;
+
+         &_success {
+            top: -47px;
+         }
+      }
+
+      &__number {
+         margin-block-start: 15px;
+      }
+   }
+   .modal-form {
+      width: 100%;
+      &__input {
+         margin-block-end: 12px;
+      }
+   }
 }

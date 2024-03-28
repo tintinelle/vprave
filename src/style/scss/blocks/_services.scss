@@ -111,6 +111,11 @@
       .services {
          background-image: none;
          gap: 21px;
+      
+      &__gradient {
+         content: url(./../images/services/services-gradient-mob.png);
+         top: -23%;
+      }
 
 		&__title {
          margin-inline-start: 15px;

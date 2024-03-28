@@ -1,5 +1,6 @@
 .results {
    position: relative;
+
       &__gradient {
          position: absolute;
          top: -25%;
@@ -57,18 +58,14 @@
       img {
          margin: 0 auto;
       }
-
-			&_prev {
-			}
-
-			&_next {
-			}
 		}
 
 		&__slider {
       width: 77%;
       margin: 0 auto;
-      overflow-x: hidden;
+      overflow-x: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
       display: flex;
       scroll-behavior: smooth;
       border-left: 1px solid var(--blue-400);
@@ -105,11 +102,15 @@
 		}
 }
 
+.results__slider::-webkit-scrollbar {
+   display: none;
+}
+
 @media screen and (min-width: 1441px) {
    .results {
       &__number {
-         width: 23%;
          border-top: 1px solid var(--blue-400);
+         flex-grow: 1;
       }
    }
 }
@@ -156,9 +157,14 @@
 
 @media screen and (max-width: 415px) {
    .results {
+      &__gradient {
+         content: url(./../images/results/results-gradient-mob.png);
+         top: -23%;
+      }
+
       &__number {
          img:first-of-type {
-         margin-inline: 0;
+         margin-inline: 4px 0;
       }
       }
       &__content-wrapper {

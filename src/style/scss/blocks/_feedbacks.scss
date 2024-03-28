@@ -99,13 +99,21 @@
 		}
 }
 
+@media screen and (min-width: 1440px) {
+   .feedbacks {
+      &__content-wrapper {
+         flex-grow: 1;
+      }
+   }
+}
+
 @media screen and (max-width: 988px) {
    .feedbacks {
       background-image: none;
       padding-block-end: 0;
 
       &__content-wrapper {
-         padding: 0;
+         padding: 0 0 6px 6px;
       }
 
       &__cards {
@@ -135,7 +143,7 @@
 }
 
 
-@media screen and (max-width: 509px) {
+@media screen and (max-width: 609px) {
    .feedbacks {
       &__cards {
          max-height: 500px;

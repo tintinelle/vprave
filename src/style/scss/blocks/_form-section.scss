@@ -92,10 +92,19 @@
             margin-inline-start: 8px;
          }
 		}
+
+      &__error-message {
+         color: rgb(222, 43, 43);
+         margin-block-end: 30px;
+      }
 }
 
 @media screen and (max-width: 635px) {
    .form-section {
+      &__gradient {
+         display: none;
+      }
+      
       &__number {
          img:first-of-type {
             margin: 33px auto 0;   

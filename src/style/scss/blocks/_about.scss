@@ -54,12 +54,24 @@
       @include button (clamp(227px, 37.3%, 392px), clamp(12px, 1vw, 14px) clamp(7.5px, 1.6vw, 24px), clamp(12px, 1.25vw, 18px));
       margin-inline-start: clamp(16px, 3.75vw, 54px);
       margin-block-end: clamp(14px, 3vw, 44px);
-      gap: 5px;
+      gap: 5px; 
 
+      img {
+        width: 22px;
+        align-self: flex-end;
+      }
+
+      @media screen and (max-width: 938px) {
+        width: 50%;
+        padding-block-start: 15px;
+      }
+      @media screen and (max-width: 682px) {
+        width: 90%;
+        padding-block-start: 12px;
         img {
-          width: 22px;
-          align-self: flex-end;
+          display: none;
         }
+      }
 		}
 
 		&__images {
@@ -72,9 +84,31 @@
 		}
 }
 
+@media screen and (min-width: 1441px) {
+  .about {
+    border-bottom: 1px solid var(--blue-500);
+
+    &__number {
+      width: 23%;
+    }
+    &__number, &__content-wrapper {
+      border-bottom: none;
+    }
+
+    &__button {
+      width: 40%;
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .about {
     gap: 21px;
+
+    &__gradient {
+      content: url(./../images/about/about-gradient-mob.png);
+      top: -16%;
+    }
 
 		&__number {
       min-width: 86px;
@@ -97,9 +131,7 @@
 		}
 
 		&__button {
-      img {
-        display: none;
-      }
+      max-width: 227px;
 		}
 
 		&__images {
